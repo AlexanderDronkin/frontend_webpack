@@ -1,0 +1,253 @@
+.main {
+  --promotion-width: 252px;
+
+  &__swiper {
+    &-space {
+      position: relative;
+    }
+
+    &-container {
+      overflow: hidden;
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+      z-index: 2;
+      right: -20px;
+
+      &.slider-arrow--left {
+        left: -20px;
+      }
+    }
+
+    &-pagination {
+      bottom: 6px !important;
+      left: 50% !important;
+      width: max-content !important;
+      transform: translateX(-50%);
+
+      .swiper-pagination-bullet {
+        margin: 0 6px !important;
+        background: rgb(255 255 255 / 24%);
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+          background: $white;
+        }
+      }
+    }
+  }
+
+  &__banner {
+    position: relative;
+
+    &-content {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-tags {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      font-weight: 700;
+      font-size: $font-size-text;
+      line-height: 19px;
+      color: $white;
+      background: rgb(11 31 53 / 16%);
+      backdrop-filter: blur(12px);
+      border-radius: 0 0 8px 8px;
+
+      &-separator {
+        height: 19px;
+        opacity: 0.4;
+        border-left: 1px solid #fff;
+        margin: 0 8px;
+      }
+    }
+
+    &-title {
+      width: 387px;
+    }
+
+    &-description {
+      width: 225px;
+      margin-top: 33px;
+    }
+
+    &-link {
+      margin-top: 33px;
+      width: 224px;
+      height: 48px;
+      background: $white;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-text {
+        width: 126px;
+      }
+
+      &-arrow {
+        width: 24px;
+        height: 24px;
+        color: $dark;
+        fill: $dark;
+      }
+    }
+  }
+
+  &__categories {
+    margin: 40px -10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__category {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+
+    &-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+
+      &-wrapper {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: $borneo-light-4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          color: $gray-dark;
+          fill: $gray-dark;
+        }
+      }
+    }
+
+    &-text {
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: $font-size-small;
+      line-height: 16px;
+      color: $dark;
+    }
+  }
+
+  &__line {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100vw;
+    border-bottom: 1px solid $borneo-light-3;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__promotions {
+    &-swiper {
+      &-space {
+        position: relative;
+        margin-bottom: 80px;
+      }
+
+      &-container {
+        overflow: hidden;
+      }
+
+      &-slide {
+        width: var(--promotion-width);
+      }
+
+      &-arrow {
+        position: absolute;
+        top: calc(var(--promotion-width) / 2 - 20px);
+        z-index: 2;
+        right: -20px;
+
+        &.slider-arrow--left {
+          left: -20px;
+        }
+      }
+    }
+  }
+
+  &__promotion {
+    width: 100%;
+    text-decoration: none;
+    color: $dark;
+
+    &-top {
+      width: 252px;
+      height: 252px;
+      position: relative;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 12px;
+    }
+
+    &-tag {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $pink;
+      border-radius: 12px 0;
+      padding: 8px 16px;
+      font-weight: 700;
+      font-size: $font-size-h3;
+      line-height: 22px;
+      color: $white;
+    }
+
+    &-title {
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: $font-size-h3;
+      line-height: 22px;
+      max-width: 23ch;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &-description {
+      margin-top: 4px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: $gray-dark;
+      max-width: 30ch;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

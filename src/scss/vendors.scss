@@ -1,0 +1,10 @@
+// стили вендорных библиотек
+
+// нормализация и исправление ошибок в стилях разных браузеров
+@import "~@csstools/normalize.css";
+@import "~sanitize.css";
+@import "~sanitize.css/forms.css";
+@import "~sanitize.css/typography.css";
+@import "~sanitize.css/reduce-motion.css";
+@import "~sanitize.css/system-ui.css";
+@import "~sanitize.css/ui-monospace.css";

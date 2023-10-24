@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "lib": ["es6", "dom"],
+    "rootDir": "./",
+    "module": "commonjs",
+    "target": "es6",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": "./",
+    "jsx": "react",
+    "jsxFactory": "jsx",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "@component": ["components/index.ts"],
+      "@components/*": ["components/*"],
+      "@fonts/*": ["assets/fonts/*"],
+      "@images/*": ["assets/images/*"],
+      "@svg/*": ["assets/svg/*"]
+    },
+    "typeRoots": [
+      "../node_modules/@types",
+      "global.d.ts"
+    ]
+  },
+  "include": [
+    "./"
+  ],
+  "exclude": [
+    "../node_modules"
+  ]
+}
